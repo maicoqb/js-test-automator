@@ -1,0 +1,23 @@
+{
+  "name": "js-test-automator",
+  "version": "0.1.0",
+  "description": "To help your life and make tests easy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3"
+  },
+  "devDependencies": {
+    "ast-compare": "^1.12.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "jest": "^24.8.0",
+    "mock-require": "^3.0.3",
+    "rewire": "^4.0.1",
+    "sinon": "^7.3.2"
+  }
+}
