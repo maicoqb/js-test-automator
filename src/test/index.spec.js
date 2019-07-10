@@ -1,9 +1,8 @@
 'use strict';
 const {assert} = require('chai');
-const compare = require('ast-compare');
 
 const testAutomator = require('../main/index');
-const {expandObject} = require('./utils/expandObject');
+const {astContains} = require('./utils/astContains');
 
 describe('index', () => {
 
@@ -20,7 +19,7 @@ describe('index', () => {
         });
         `;
 
-        const {ast:{program:{body}}} = testAutomator.createFromCode(code);
+        const result = testAutomator.createFromCode(code);
 
         const expected = [
             {
@@ -37,7 +36,7 @@ describe('index', () => {
             }
         ];
 
-        assert.strictEqual(compare(body, expandObject(expected)), true, 'deve conter a árvore de describe');
+        assert.ok(astContains(result.code, expectedCode), "o código retornado deve conter o describe básico");
     });
 
     it.skip('final expectation', () => {
