@@ -1,7 +1,7 @@
 'use strict';
 const {assert} = require('chai');
 
-const {expandObject} = require("./expandObject");
+const {expandObject} = require('./expandObject');
 
 describe('expandObject', () => {
     it('deve manter o objeto igual se nada mudar', () => {
@@ -31,13 +31,13 @@ describe('expandObject', () => {
     it('deve transformar dot.notation em objeto profundo', () => {
         const object = {
             a: '123',
-            'b.c.d': "e",
+            'b.c.d': 'e',
         };
         const expected = {
             a: '123',
             b: {
                 c: {
-                    d: "e"
+                    d: 'e'
                 }
             }
         };
@@ -73,7 +73,7 @@ describe('expandObject', () => {
     it('deve transformar índices em chaves de array', () => {
         const object = {
             a: '123',
-            'b.0.e': "f",
+            'b.0.e': 'f',
         };
         const expected = {
             a: '123',
@@ -88,7 +88,7 @@ describe('expandObject', () => {
     it('deve transformar .. em chaves de array', () => {
         const object = {
             a: '123',
-            'b..e': "f",
+            'b..e': 'f',
         };
         const expected = {
             a: '123',
@@ -103,7 +103,7 @@ describe('expandObject', () => {
     it('deve transformar o índice na posicão correta do array', () => {
         const object = {
             a: '123',
-            'b.2.e': "f",
+            'b.2.e': 'f',
         };
         const expected = {
             a: '123',

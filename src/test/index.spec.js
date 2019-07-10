@@ -1,8 +1,9 @@
+'use strict';
 const {assert} = require('chai');
 const compare = require('ast-compare');
 
 const testAutomator = require('../main/index');
-const {expandObject} = require("./utils/expandObject");
+const {expandObject} = require('./utils/expandObject');
 
 describe('index', () => {
 
@@ -24,19 +25,19 @@ describe('index', () => {
         const expected = [
             {
                 expression: {
-                    'callee.name': "describe",
+                    'callee.name': 'describe',
                     'arguments..body.body..expression': {
-                        'callee.name': "beforeEach",
+                        'callee.name': 'beforeEach',
                         'arguments..body.body..expression': {
-                            'callee.name': "mock",
-                            'arguments..value': "path/to/my/module"
+                            'callee.name': 'mock',
+                            'arguments..value': 'path/to/my/module'
                         }
                     }
                 }
             }
         ];
 
-        assert.strictEqual(compare(body, expandObject(expected)), true, "deve conter a árvore de describe");
+        assert.strictEqual(compare(body, expandObject(expected)), true, 'deve conter a árvore de describe');
     });
 
     it.skip('final expectation', () => {
@@ -62,6 +63,6 @@ describe('index', () => {
         });
         `;
 
-        assert.fail(null, null, "not implemented");
+        assert.fail(null, null, 'not implemented');
     });
 });

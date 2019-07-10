@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -15,6 +18,7 @@
     "ast-compare": "^1.12.1",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
+    "eslint": "^5.16.0",
     "jest": "^24.8.0",
     "mock-require": "^3.0.3",
     "rewire": "^4.0.1",

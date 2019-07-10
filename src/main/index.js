@@ -1,4 +1,5 @@
-const babel = require("babel-core");
+'use strict';
+const babel = require('babel-core');
 
 const code = `
 const myModule = require('path/to/my/module');
@@ -16,7 +17,7 @@ const setupPlugin = (callbacks) => () => {
                 }
             }
         }
-    }
+    };
 };
 
 const transform = code => {
